@@ -128,6 +128,10 @@ PRODUCT_PACKAGES += \
     WeatherProvider \
     DataUsageProvider
 
+# OmniROM packages
+PRODUCT_PACKAGES += \
+    OmniSwitch
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
