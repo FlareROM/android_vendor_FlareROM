@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniSwitch
 
+# FlareROM packages
+PRODUCT_PACKAGES += \
+    FlareROM_OTA
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
@@ -270,6 +274,67 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(CM_VERSION) \
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
+
+# FlareROM optimization
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.HOME_APP_ADJ=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.HorizontalVVM=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.media.enc.hprof.vid.bps=41943040
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.media.enc.hprof.vid.fps=60
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  debug.sf.hw=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.min_pointer_dur=10
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.telephony.call_ring.delay=1000
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  windowsmgr.max_events_per_sec=80
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  video.accelerate.hw=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  debug.performance.tuning=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  debug.buttonfast.delay=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.media.enc.jpeg.quality=100
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  pm.sleep_mode=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ril.disable.power.collapse=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.media.dec.jpeg.memcap=8000000
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.lge.proximity.delay=25
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ril.spender.bending=1
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ril.music_echo_sound=12
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  ril.category.delay=0
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  debug.kill_allocating_task=0
 
 -include vendor/cm-priv/keys/keys.mk
 
