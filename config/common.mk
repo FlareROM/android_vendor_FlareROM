@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     WeatherProvider
 
+# OmniROM packages
+PRODUCT_PACKAGES += \
+    OmniSwitch
+
 # Exchange support
 PRODUCT_PACKAGES += \
     Exchange2
