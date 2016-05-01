@@ -23,3 +23,8 @@ FWB : Fix back button tinting:
 FWB : SystemUI : Remove the sides margins
 FWB : REVERT "[2/2] Frameworks: Slim doze options"
 android_packages_services_Mms SOUCE UPDATE
+
+## 1.0.2
+OmniSwitch : Add Korean translation (1)
+Source UPDATE
+......
