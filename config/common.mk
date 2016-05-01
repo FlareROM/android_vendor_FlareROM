@@ -2,10 +2,10 @@ PRODUCT_BRAND ?= cyanogenmod
 
 ifdef CM_NIGHTLY
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmodnightly
+    ro.rommanager.developerid=flarerom
 else
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmod
+    ro.rommanager.developerid=flarerom
 endif
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
@@ -42,7 +42,7 @@ endif
 
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
-    vendor/cm/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+    vendor/cm/CHANGELOG.mkdn:system/etc/Changelog.txt
 
 # Backup Tool
 ifneq ($(WITH_GMS),true)
@@ -203,6 +203,7 @@ DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 PRODUCT_VERSION_MAJOR = 1
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0-RC0
+FLAREROM_VERSION_THREE = 1
 
 # Set CM_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
@@ -241,12 +242,12 @@ ifdef CM_BUILDTYPE
         endif
     endif
 else
-    # If CM_BUILDTYPE is not defined, set to UNOFFICIAL
-    CM_BUILDTYPE := UNOFFICIAL
+    # If CM_BUILDTYPE is not defined, set to BETA
+    CM_BUILDTYPE := BETA
     CM_EXTRAVERSION :=
 endif
 
-ifeq ($(CM_BUILDTYPE), UNOFFICIAL)
+ifeq ($(CM_BUILDTYPE), BETA)
     ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
         CM_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
     endif
@@ -263,7 +264,8 @@ ifeq ($(CM_BUILDTYPE), RELEASE)
         endif
     endif
 else
-    CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(CM_BUILDTYPE)$(CM_EXTRAVERSION)-$(CM_BUILD)
+    CM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(FLAREROM_VERSION_THREE).$(CM_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
+    FLAREROM_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(FLAREROM_VERSION_THREE).$(CM_BUILDTYPE)-$(shell date -u +%Y%m%d)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -271,6 +273,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.cm.releasetype=$(CM_BUILDTYPE) \
   ro.modversion=$(CM_VERSION) \
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
+
+# FlareROM
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.flarerom.version=$(FLAREROM_VERSION)
 
 # FlareROM optimization
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -351,7 +357,7 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
     else
       TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
     endif
-    CM_DISPLAY_VERSION=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)
+    CM_DISPLAY_VERSION=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(FLAREROM_VERSION_THREE).$(CM_BUILDTYPE)-$(shell date -u +%Y%m%d)
   endif
 endif
 endif
