@@ -28,3 +28,13 @@ android_packages_services_Mms SOUCE UPDATE
 OmniSwitch : Add Korean translation (1)
 Source UPDATE
 ......
+
+## 1.0.3
+Dialer : ListsFragment.java - Tab ICON -> Text
+Settings : cm_colors.xml : Add dashboard category color 
+SystemUI : Simply fix the lock screen icon 
+SystemUI : Transparent background modified 
+FWB : search icon and menu icon to alphabet 
+android : default.xml : vendor/cm name change 
+android_build : Change ROM Toolchain 
+android_build : Add Make Dirty Option 
