@@ -6,6 +6,13 @@ Visit http://github.com/FlareROM for full source and git access.
 CHANGELOG
 ---------
 
+## 1.0.5
+SystemUI : delete shadow 
+FWB : Simply change the switch bar 
+Gallery2 : colors.xml - Replace Color Wallpaper 
+cm_colors.xml : edit dashboard category title bg color 
+Contacts : modify application name(ko)
+
 ## 1.0.4
 Source Update (Android 6.0.1 R43)
 Messaging : Screen changes when the message is empty. 
