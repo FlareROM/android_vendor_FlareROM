@@ -6,8 +6,32 @@ Visit http://github.com/FlareROM for full source and git access.
 CHANGELOG
 ---------
 
-### 1.0.0
-Initial Release
+## 1.0.4
+Source Update (Android 6.0.1 R43)
+Messaging : Screen changes when the message is empty. 
+Setupwizard : colors.xml - Replace Color Background 
+Gallery2 : colors.xml - Replace Color Wallpaper 
+Eleven : Music playback screen to modify colors 
+SoundRecorder : Modify the background color 
+Contacts : modify application name
+Screencast : (values-ko/strings.xml)Add Korean translation 
+SystemUI : delete shadow 
+FWB : Simply change the switch bar 
+
+## 1.0.3
+Dialer : ListsFragment.java - Tab ICON -> Text
+Settings : cm_colors.xml : Add dashboard category color 
+SystemUI : Simply fix the lock screen icon 
+SystemUI : Transparent background modified 
+FWB : search icon and menu icon to alphabet 
+android : default.xml : vendor/cm name change 
+android_build : Change ROM Toolchain 
+android_build : Add Make Dirty Option 
+
+## 1.0.2
+OmniSwitch : Add Korean translation (1)
+Source UPDATE
+......
 
 ## 1.0.1
 Settings : REVERT "[1/2] Settings: Slim doze options"
@@ -24,17 +48,5 @@ FWB : SystemUI : Remove the sides margins
 FWB : REVERT "[2/2] Frameworks: Slim doze options"
 android_packages_services_Mms SOUCE UPDATE
 
-## 1.0.2
-OmniSwitch : Add Korean translation (1)
-Source UPDATE
-......
-
-## 1.0.3
-Dialer : ListsFragment.java - Tab ICON -> Text
-Settings : cm_colors.xml : Add dashboard category color 
-SystemUI : Simply fix the lock screen icon 
-SystemUI : Transparent background modified 
-FWB : search icon and menu icon to alphabet 
-android : default.xml : vendor/cm name change 
-android_build : Change ROM Toolchain 
-android_build : Add Make Dirty Option 
+### 1.0.0
+Initial Release
