@@ -6,6 +6,15 @@ Visit http://github.com/FlareROM for full source and git access.
 CHANGELOG
 ---------
 
+## 1.0.6
+vendor/flarerom : common.mk - OTA FIX 
+build : Apply correct, optimized mfpu compiler flag for ARMv7-A Cortex CPUs
+build : Kill some log spam 
+build : Create 0 compression ratio jar files
+Settings : edit dashboard category title bg color 
+Gallery2 : colors.xml - Replace Color Wallpaper 
+FWB : Simply change the switch bar 
+
 ## 1.0.5
 SystemUI : delete shadow 
 FWB : Simply change the switch bar 
