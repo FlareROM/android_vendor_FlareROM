@@ -200,22 +200,22 @@ PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/V4A/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 	
 # AdAway App  
-PRODUCT_COPY_FILES += \   
-    vendor/cm/prebuilt/AdAway/AdAway.apk:system/priv-app/AdAway/AdAway.apk  
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/AdAway/AdAway.apk:system/priv-app/AdAway/AdAway.apk
   
 # KernelAdiutor  
-PRODUCT_COPY_FILES += \  
-    vendor/cm/prebuilt/KernelAdiutor/KernelAdiutor.apk:system/app/KernelAdiutor/KernelAdiutor.apk  	
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/KernelAdiutor/KernelAdiutor.apk:system/app/KernelAdiutor/KernelAdiutor.apk
      
 # SuperSU  
-PRODUCT_COPY_FILES += \  
-    vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \  
-    vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon  
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/cm/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 	
 # FlareROM optimization 
-PRODUCT_COPY_FILES += \  
-    vendor/cm/prebuilt/common/etc/init.d/S86battery:system/etc/init.d/S86battery \  
-    vendor/cm/prebuilt/common/etc/init.d/S89touch:system/etc/init.d/S89touch 	 
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/init.d/S86battery:system/etc/init.d/S86battery \
+    vendor/cm/prebuilt/common/etc/init.d/S89touch:system/etc/init.d/S89touch
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=0
