@@ -119,7 +119,8 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     ExactCalculator \
     LiveLockScreenService \
-    WeatherProvider
+    WeatherProvider \
+    DataUsageProvider
 
 # OmniROM packages
 PRODUCT_PACKAGES += \
