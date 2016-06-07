@@ -118,7 +118,8 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     WeatherProvider \
-    DataUsageProvider
+    DataUsageProvider \
+    WallpaperPicker
 
 # OmniROM packages
 PRODUCT_PACKAGES += \
